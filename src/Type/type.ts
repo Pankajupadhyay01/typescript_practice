@@ -1,0 +1,1 @@
+export type pro = {id:number,title:string,body:string}
