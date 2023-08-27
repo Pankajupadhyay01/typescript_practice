@@ -28,6 +28,9 @@ const Card = (d: { props: weather_type | null, err: string }) => {
             </div>
             <div className='flex justify-between w-[90%] flex-col items-center text-lg text-blue-900 font-bold'>
               {d.props?.main.temp}
+              <div className='text-green-900 font-bold text-[28px] md:text-[30px]'>
+                {d.props?.weather[0].description}
+              </div>
             </div>
           </div>
           : <div className='flex flex-col justify-center m-auto items-center bg-green-100 my-2 h-[50vh] w-[80%] text-black font-bold md:w-[40%]' >{d.err}</div>
