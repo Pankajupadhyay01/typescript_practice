@@ -4,7 +4,7 @@ import { weather_type } from "../Type/type";
 import Card from "./Card";
 
 const Home = () => {
-  const [loc, setloc] = useState<string>("haldwani")
+  const [loc, setloc] = useState<string>("pune")
   const [data, setdata] = useState<weather_type | null>(null)
   const [err, seterr] = useState<string>("200")
   const [loading, setloading] = useState<boolean>(true)
@@ -18,7 +18,7 @@ const Home = () => {
   }
   useEffect(() => {
     axios
-      .get<weather_type>(`https://api.openweathermap.org/data/2.5/weather?q=${loc}&appid=3265874a2c77ae4a04bb96236a642d2f&units=metric`)
+      .get<weather_type>(`https://api.openweathermap.org/data/2.5/weather?q=${loc}&appid=419eaf432fb4945c24652c41d06ddfcf&units=metric`)
       .then(res => {
         seterr("200")
         setdata(res.data)
